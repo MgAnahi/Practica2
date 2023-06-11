@@ -1,0 +1,274 @@
+*{
+	margin: 0;
+	padding:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;  /*acomodo el contenido del contenedor en dos columnas ajustandolo a su medida*/
+}
+body{
+	font-family: "Open  Sans",Arial,sans-serif;
+	font-size: 16px;
+}
+.Contenedor{
+	/*background: darkgray;*/
+	width: 90%;
+	max-width: 1000px;/*Anchura maxima*/
+	margin: auto; /*acomoda el contendedor (lo centra)*/
+	overflow: hidden;
+}
+
+/*header*/
+header{
+	width:100%;
+	background: url('../imagenes/portada.jpeg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center 0;
+}
+
+header .Contenedor{
+	position: relative; /*posiciona el contenido*/
+	height: 700px;
+
+}
+/*el punto indica que solo va a modificar la clase que se esta llamando*/
+header .Menu{
+	width: 100%;
+	text-align: right;
+}
+header .Menu a{
+	color: #fff;
+	font-size: 20px;
+	display: inline-block;
+	margin: 40px 20px ;
+	text-decoration: none;
+	position: relative;
+
+}
+/*para que el apuntador del mouse sobre una etiqueta en este caso A muestre un efecto*/
+header .Menu a:hover{ 
+   text-decoration: underline;
+}
+header .textos{/*parte de responsividad.....el punto indica que solo se editara la seccion que se este llamando*/
+	width: 100%;
+	color: ghostwhite;
+	position: absolute;
+	top: 50%;
+	margin-top: -52px;
+}
+header .textos .nombre{
+	font-size: 50px;
+	font-weight: 600px;/*Ayuda para indicar que tan gordita va a estar en este caso er nombre del sitio*/
+}
+header .textos .nombre span{
+	font-weight: 300px;
+}
+header .textos h3{
+	font-weight:300;
+	font-size: 25px;
+	font-style: italic;
+}
+/*..............................main.................................................*/
+
+.main {
+	background: url('../imagenes/images.jpg');
+	background-repeat: repeat;
+}
+.main .acerca_de .Contenedor{
+	overflow: visible;
+	position: relative;
+
+}
+
+.main.acerca_de .foto {
+   width: 80%;
+   position: absolute;
+   left: 0;
+   top: -50px;
+   z-index:  0;
+   -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.35);
+   box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.35);
+}
+
+.main .acerca_de .foto img{
+	width: 100%;
+	vertical-align: top;/*top permite que la posicion sea pegada al margen*/
+}
+
+.main .acerca_de article{
+	background: #fff;
+	padding: 40px;
+	width: 50%;
+	position: relative;
+	top: 500px;
+	float: right; /*permite acomodar las columnas*/
+	z-index: 1; /*indica quien comenzara a alinearse*/
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.35);
+   box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.35);
+}
+ .main .acerca_de article h3{ /*Modificar solo lo que se encuentra en la etiqueta h3*/
+ 	font-size: 50px;
+ 	font-weight: 300;
+ 	margin-bottom: 40px;
+
+
+ }
+
+ .main .acerca_de article p{
+ 	line-height: 28px;
+ 	margin-bottom: 15px;
+ }
+
+ .main .menu {
+ padding-top: 570px;  /*establece el espaciado de relleno requerido entre la imagen y el texto*/
+ margin-bottom: 50px; /*establece el espacio requerido en la parte inferior*/
+
+ }
+
+ .main .menu .titulo{
+ 	font-size: 40px;    /*cambia el tamaño de la letra*/
+ 	font-weight: 300;  /*cambia la anchura de la letra*/
+ 	text-align: center; /*cambia la posicion de la palabra*/
+ 	margin-bottom: 40px; /*establece el espacio requerido en la parte inferior*/
+ }
+
+ .main .menu .Contenedor-menu {
+ 	border: 2px solid #000; /*asigna un margen*/
+ 	background: transparent; /*asigna un fondo*/
+ 	padding: 10px; /*genera un espaciado entre el texto y la parte de lado*/
+ 	overflow: hidden; /*con esta opción hacemos que todo el contenido que sobresale de su contenedor se oculte.*/
+ }
+
+ .main .menu article{
+ 	width: 50%; /*establece el ancho del área de contenido*/
+ 	float: left; /*Flotará a la izquierda del todo*/
+ 	padding: 20px; /*relleno que se crea alrededor del contenido de un elemento dentro de los bordes definidos y sirve para dar formato*/
+ }
+ .main .menu article .categoria {
+ 	font-size: 22px; /*especifica y modifica la dimensión de la letra*/
+ 	font-weight: 700; /*cambia la anchura de la letra*/
+ 	margin-bottom: 40px; /*establece el espacio requerido en la parte inferior*/
+ 	text-align: center; /*cambia la posicion de la palabra*/
+
+ }
+
+ .main .menu article .carro {
+ 	overflow: hidden;   /*con esta opción hacemos que todo el contenido que sobresale de su contenedor se oculte.*/
+ 	margin-bottom: 30px;  /*establece el espacio requerido en la parte inferior*/
+ 	padding-bottom: 20px; /*establece el espacio de relleno requerido en la parte inferior del elemento*/
+ 	border-bottom: 4px dotted #000; /*permite de definir de una vez todas las propiedades individuales*/
+ }
+
+ .main .menu article .Nombre {
+ 	font-size: 20px;  /*especifica y modifica la dimensión de la letra*/
+ 	margin-bottom: 15px; /*establece el espacio requerido en la parte inferior*/
+ 	float: left; /*Flotará a la izquierda del todo*/
+ }
+
+ .main .menu article .Precio {
+ 	float: right;
+ 	font-size: 20px;  /*especifica y modifica la dimensión de la letra*/
+ 	margin-bottom: 15px;
+ }
+
+ .main .menu article .Descripcion {
+ 	font-size: 16px;  /*especifica y modifica la dimensión de la letra*/
+ 	color: #676767; /*asigna el color a la letra*/
+ 	clear: both; /*hace que la caja sobre la que se aplica baje hasta que su borde superior esté por debajo del borde inferior de cualquier elemento flotado*/
+ }
+
+ .main .menu article .Contenedor-menu2 {
+ 	border: 1px solid #000;
+ 	background: transparent;
+ 	padding: 10px;
+ 	overflow: hidden; /*con esta opción hacemos que todo el contenido que sobresale de su contenedor se oculte.*/
+ }
+
+ .main .galeria {
+ 	overflow: hidden; /*con esta opción hacemos que todo el contenido que sobresale de su contenedor se oculte.*/
+ }
+
+.main .galeria .foto {
+	width: 25%;
+	float: left; /*Flotará a la izquierda del todo*/
+}
+
+.main .galeria .foto img {
+	vertical-align: top;
+	width: 100%;
+	opacity: .9; /*define la transparencia de la imagen*/
+}
+
+.main .galeria .foto img:hover {
+	opacity: 1;
+	-webkit-transition: all .3s ease;  /*----------*/
+	-o-transition: all .3s ease;   /*-------------*/
+	transition: all .3s ease; /*Permite definir la transición entre dos estados de un elemento.*/
+
+}
+
+.main .ubicacion {
+	background: #fff;
+	padding: 60px 0;
+}
+
+.main .ubicacion .titulo {
+	text-align: center;
+	font-size: 40px;
+	line-height: 40px;
+	font-weight: 300;
+	margin-bottom: 40px;
+}
+
+.main .ubicacion .direccion {
+	width: 50%;
+	float: left;
+	text-align: left;
+}
+
+.main .ubicacion .horarios {
+	width: 50%;
+	float: right;
+	text-align: right;
+}
+
+.main .ubicacion .direccion .calle {
+	margin-bottom: 15px;
+}
+
+.main .ubicacion .horarios {
+	overflow: hidden;
+}
+
+.main .ubicacion .horarios h4 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.main .ubicacion .horarios .entre-semana,
+.main .ubicacion .horarios .fin-semana {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+
+.main .mapa {
+	width: 100%;
+	overflow: hidden;
+}
+
+.main .mapa iframe {
+	width: 100%;
+	max-height: 600px;
+}
+
+/*------------FOOTER------------*/
+footer {
+	background: #000;
+}
+
+footer .copyright {
+	text-align: center;
+	padding: 15px 0;
+	color: #fff;
+}
